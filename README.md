@@ -33,17 +33,17 @@ First of all, we have to merge the two databases into one
 ```python
 transactions=pd.merge(transactions,product_areas, how='inner', on= 'product_area_id')
 ```
-Then  we drop the 'Non - Food' columns, since we are not interested in this, as we are addressing food shopping
+then  we drop the 'Non - Food' columns, since we are not interested in this, as we are addressing food shopping,
 
 ```python
 transactions.drop(transactions[transactions['product_area_name']=='Non-Food'].index, inplace=True)
 ```
-Then we aggregate the sales on customer level
+then we aggregate the sales on customer level,
 
 ```python
 transactions_summary=transactions.groupby(['customer_id','product_area_name' ])['sales_cost'].sum().reset_index()
 ```
-And pivot the data, to get each user_id as row
+and pivot the data, to get each user_id as row.
 
 ```python
 transactions_summary_pivot=transactions.pivot_table(index='customer_id',
@@ -57,5 +57,55 @@ transactions_summary_pivot=transactions.pivot_table(index='customer_id',
  Lastly, we want to turn the sales into sales percentages
  
  ```python
- 
+ data_for_clustering=transactions_summary_pivot.drop(['Total'], axis=1)
  ```
+ # 04. Data Cleaning and preparation
+ We can now check for missing values (and there are not in our case).
+
+ ``python
+  #Checking for missing values
+ data_for_clustering.isna().sum()
+ ```
+ 
+ It is now time to prepare the data. As we are going to use K-Means, which is a distance base algorithm, it is quite important to normalise the data. we can do it using  MinMaxScaler from Sklearn.
+ 
+``python
+#Normalising data
+scale_norm=MinMaxScaler()
+data_for_clustering_scaled=pd.DataFrame(scale_norm.fit_transform(data_for_clustering), columns=data_for_clustering.columns)
+ ```
+ 
+ We are now redy to go!
+ 
+ # 05. Clustering
+ In order to start with clustering, we first have to decide the numbers of clusters to use (or the so called number of Ks).
+ To do so, we are going to see how Within cluster sum of squares (or WCSS) changes in relations to different numbers for K and choose the one that better answers the trade off between the two.
+ 
+ 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/69009356/194899360-e908b1fe-2f7c-4670-adaa-b9fe26c9e1b1.png"
+ />
+</p>
+
+In our case it seems that 3 is a good number to use for K.
+
+We can now create our model 
+
+``python
+kmeans=KMeans(n_clusters=3, random_state=42)
+kmeans.fit(data_for_clustering_scaled)
+ ```
+ 
+ and take a look at the results
+ 
+ ``python
+#Add cluster label to data
+data_for_clustering['cluster']=kmeans.labels_
+#Check cluster size
+data_for_clustering['cluster'].value_counts()
+ ```
+
+ 
+
+ 
+ 
