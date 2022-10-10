@@ -1,10 +1,17 @@
 # -You-Are-What-You-Eat-Customer-Segmentation
 
 <p align="center">
-  <img src=""
+  <img src="https://user-images.githubusercontent.com/69009356/194903847-4da4fda7-eb60-4a51-9f94-24373324eb03.png"
  />
 </p>
 
+# Summary
+- [01. Business Task]()
+- [02. Data]()
+- [03. Data Wrangling]()
+- [04. Data cleaning and prepartion]()
+- [05. Clustering]()
+- [06. Results and business outcomes]()
 
 
 # 01. Business Task
@@ -107,9 +114,9 @@ data_for_clustering['cluster']=kmeans.labels_
 data_for_clustering['cluster'].value_counts()
  ```
 
-0    641
-2    127
-1    103
+- Cluster 0: 641
+- Cluster 1: 103
+- Cluster 2: 127
 
 We have a quite densely populated cluster and two quite smaller ones. Let's profile them.  
 
