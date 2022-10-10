@@ -74,9 +74,9 @@ transactions_summary_pivot=transactions.pivot_table(index='customer_id',
  data_for_clustering.isna().sum()
  ```
  
-It is now time to prepare the data. As we are going to use K-Means, which is a distance base algorithm, it is quite important to normalise the data. we can do it using  MinMaxScaler from Sklearn.
+It is now time to prepare the data. As we are going to use K-Means, which is a distance based algorithm, it is quite important to normalise the data. we can do it using  MinMaxScaler from Sklearn.
  
-``python
+```python
 #Normalising data
 scale_norm=MinMaxScaler()
 data_for_clustering_scaled=pd.DataFrame(scale_norm.fit_transform(data_for_clustering), columns=data_for_clustering.columns)
