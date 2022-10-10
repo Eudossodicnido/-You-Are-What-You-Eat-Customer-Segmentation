@@ -1,4 +1,4 @@
-# -You-Are-What-You-Eat-Customer-Segmentation
+# You Are What You Eat Customer Segmentation
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/69009356/194903847-4da4fda7-eb60-4a51-9f94-24373324eb03.png"
