@@ -15,7 +15,7 @@
 
 
 # 01. Business Task
-In this case we are asked by a grocery company to help them to a segmentation of thier customer base. Thy believe there might be some changes in terms of lifestyles and customer behaviours but they do not exactly.
+In this case we are asked by a grocery company to help them to perform a segmentation of their customer base. Thy believe there might be some changes in terms of lifestyles and customer behaviours but they do not exactly. This is where we step in to help.
 
 Full code is available [here](https://github.com/Eudossodicnido/-You-Are-What-You-Eat-Customer-Segmentation/blob/main/'You%20Are%20What%20You%20Eat'%20Customer%20Segmentation.ipynb).
 
