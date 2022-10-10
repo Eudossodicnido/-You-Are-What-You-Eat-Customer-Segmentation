@@ -6,18 +6,18 @@
 </p>
 
 # Summary
-- [01. Business Task]()
-- [02. Data]()
-- [03. Data Wrangling]()
-- [04. Data cleaning and prepartion]()
-- [05. Clustering]()
-- [06. Results and business outcomes]()
+- [01. Business Task](https://github.com/Eudossodicnido/-You-Are-What-You-Eat-Customer-Segmentation/blob/main/README.md#01-business-task)
+- [02. Data](https://github.com/Eudossodicnido/-You-Are-What-You-Eat-Customer-Segmentation/blob/main/README.md#02-data)
+- [03. Data Wrangling](https://github.com/Eudossodicnido/-You-Are-What-You-Eat-Customer-Segmentation/blob/main/README.md#03-data-wrangling)
+- [04. Data cleaning and prepartion](https://github.com/Eudossodicnido/-You-Are-What-You-Eat-Customer-Segmentation/blob/main/README.md#04-data-cleaning-and-preparation)
+- [05. Clustering](https://github.com/Eudossodicnido/-You-Are-What-You-Eat-Customer-Segmentation/blob/main/README.md#05-clustering)
+- [06. Results and business outcomes](https://github.com/Eudossodicnido/-You-Are-What-You-Eat-Customer-Segmentation/blob/main/README.md#06-results-and-business-outcomes)
 
 
 # 01. Business Task
 In this case we are asked by a grocery company to help them to a segmentation of thier customer base. Thy believe there might be some changes in terms of lifestyles and customer behaviours but they do not exactly.
 
-Full code is available here.
+Full code is available [here](https://github.com/Eudossodicnido/-You-Are-What-You-Eat-Customer-Segmentation/blob/main/'You%20Are%20What%20You%20Eat'%20Customer%20Segmentation.ipynb).
 
 # 02. Data
 The data consists of two databases: a database of transactions by customers (transactions)
