@@ -130,10 +130,10 @@ cluster_summary
 </p>
  
 These clusters seem to make sense: the bigger cluster (n.0) has purchases among all the categories, so it seems to represent a "general" public with traditional purchaces.
-Cluster 1 spends basically zero in meat, while quite it spends quite a lot in cheese and in the other categories. It would seems like this cluster could be a "vegetarian" cluster.
+Cluster 1 spends basically zero in meat, while it spends quite a lot in cheese and in the other categories. It would seems like this cluster could be a "vegetarian" cluster.
 Cluster 2, on the other hand, spends 0 in both meat and diary, focusing its purchaces in fruit and vegetables. It would seem this could be a "vegan" cluster.
 
-It does indeed seem like that there are some changing in the customer base and its habits and spending behaviour.
+It does indeed seem like that there are some changes in the customer base and its habits and spending behaviour.
 The business can now, numerically, address their customers better by knowing in which segment they belong to and propose them their marketing solutions based on them.
 
 
