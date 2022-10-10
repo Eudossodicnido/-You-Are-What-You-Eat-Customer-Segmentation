@@ -69,12 +69,12 @@ transactions_summary_pivot=transactions.pivot_table(index='customer_id',
  # 04. Data Cleaning and preparation
  We can now check for missing values (and there are not in our case).
 
- ``python
+ ```python
   #Checking for missing values
  data_for_clustering.isna().sum()
  ```
  
- It is now time to prepare the data. As we are going to use K-Means, which is a distance base algorithm, it is quite important to normalise the data. we can do it using  MinMaxScaler from Sklearn.
+It is now time to prepare the data. As we are going to use K-Means, which is a distance base algorithm, it is quite important to normalise the data. we can do it using  MinMaxScaler from Sklearn.
  
 ``python
 #Normalising data
