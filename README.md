@@ -91,21 +91,42 @@ In our case it seems that 3 is a good number to use for K.
 
 We can now create our model 
 
-``python
+```python
 kmeans=KMeans(n_clusters=3, random_state=42)
 kmeans.fit(data_for_clustering_scaled)
  ```
  
- and take a look at the results
+ # 06. Results and business outcomes
+
+ Let us start by taking a look at the results
  
- ``python
+```python
 #Add cluster label to data
 data_for_clustering['cluster']=kmeans.labels_
 #Check cluster size
 data_for_clustering['cluster'].value_counts()
  ```
 
- 
+0    641
+2    127
+1    103
 
+We have a quite densely populated cluster and two quite smaller ones. Let's profile them.  
+
+```python
+cluster_summary=data_for_clustering.groupby('cluster')[['Dairy','Fruit','Meat','Vegetables']].mean().reset_index()
+cluster_summary
+ ```
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/69009356/194900471-ab21949b-0e11-466e-9c8f-696067f8c233.png"
+ />
+</p>
  
- 
+These clusters seem to make sense: the bigger cluster (n.0) has purchases among all the categories, so it seems to represent a "general" public with traditional purchaces.
+Cluster 1 spends basically zero in meat, while quite it spends quite a lot in cheese and in the other categories. It would seems like this cluster could be a "vegetarian" cluster.
+Cluster 2, on the other hand, spends 0 in both meat and diary, focusing its purchaces in fruit and vegetables. It would seem this could be a "vegan" cluster.
+
+It does indeed seem like that there are some changing in the customer base and its habits and spending behaviour.
+The business can now, numerically, address their customers better by knowing in which segment they belong to and propose them their marketing solutions based on them.
+
+
